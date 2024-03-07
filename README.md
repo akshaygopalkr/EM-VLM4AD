@@ -8,14 +8,10 @@
 ## Installation
 1. Clone this repository
 2. In the repository directory, run `mkdir multi_frame_results`
-3. Install the following libraries (assuming pytorch is properly installed in environment):
+3. To replicate our environment use the `env.yml` we have provided. The following commands should create a proper environment:
 ```
-pip install peft
-pip install transformers
-pip install accelerate
-pip install bitsandbytes
-pip install pycocotools
-pip install pycocoevalcap
+conda env create -f env.yml
+conda activate EM-VLM4AD
 ```
 ## Model Weights
 * You can download the model weights for the [T5-Medium](https://drive.google.com/drive/folders/1K61Ou-m5c5UmN2ggT-Huw3rv7PhW5Wft?usp=sharing) and [T5-Large-Q](https://drive.google.com/drive/folders/1bzxaxz6zSRZuMv284cjhQTSs_8i98kGI?usp=sharing) version of EM-VLM4AD at the following links. Put the folders for each of these models into the `multi_frame_results` folder. Your directory should look like the following:
