@@ -1,5 +1,10 @@
 # EM-VLM4AD
-* This repository contains the code necessary to replicate the paper "Efficient, Lightweight Multi-Frame Vision Language Model for Visual Question Answering in Autonomous Driving.
+<div style="display: flex;">
+    <img src="assets/ex1.jpeg" alt="Image 1" style="width: 49%;">
+    <img src="assets/ex2.jpeg" alt="Image 2" style="width: 49%;">
+</div>
+
+* This repository contains the code necessary to replicate the paper "Efficient, Lightweight Multi-Frame Vision Language Model for Visual Question Answering in Autonomous Driving", which was submitted to the Vision & Language for Autonomous Driving & Robotics Workshop at CVPR 2024.
 ## Installation
 1. Clone this repository
 2. In the repository directory, run `multi_frame_results`
