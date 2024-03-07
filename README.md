@@ -48,9 +48,16 @@ First download the train/val/test split [here](https://drive.google.com/file/d/1
 ```
 ## Running on Google Colab
 If you want to run our code on Google Colab, we have provided three different notebooks in the `colab` folder that can be used for training each model type and inference:
-
 * `train_T5_Base.ipynb`: Allows for training EM-VLM4AD with the T5-Medium LM backbone.
 * `train_T5_Large.ipynb`: Allows for training EM-VLM4AD with the quantized T5-Large LM backbone. 
     * Training hyperparameters are in the `Hyperparameters` section of the training Colab notebooks. This can allow you to resume training from a checkpoint and whether the LM should be freezed during training.
 * `eval.ipynb` Generates BLEU-4, METEOR, CIDER, and ROUGE_L metrics for a trained model. Make sure to specify model checkpoint being evaluated and what LM backbone is being used ('T5-Medium' or 'T5-Large') in the `Hyperparameters` section.
+* We recommend making a folder `DriveLM` in your Google Drive and uploading the model checkpoints and zipped data to this folder. An example directory should look like this:
+```
+└── DriveLM
+    ├── data.zip
+    ├── multi_frame_results/
+      ├── T5-Medium/
+      ├── T5-Large/
+```
 
