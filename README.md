@@ -47,4 +47,5 @@ First download the train/val/test split [here](https://drive.google.com/file/d/1
       ├── T5-Large/
 ```
 ## Running on Google Colab
-If you want to run our code on Google Colab, we have provided three different notebooks 
+If you want to run our code on Google Colab, we have provided three different notebooks that can be used for training each model type and inference:
+``
