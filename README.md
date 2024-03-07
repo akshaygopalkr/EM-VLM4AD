@@ -7,7 +7,7 @@
 * This repository contains the code necessary to replicate the paper "Efficient, Lightweight Multi-Frame Vision Language Model for Visual Question Answering in Autonomous Driving", which was submitted to the Vision & Language for Autonomous Driving & Robotics Workshop at CVPR 2024.
 ## Installation
 1. Clone this repository
-2. In the repository directory, run `multi_frame_results`
+2. In the repository directory, run `mkdir multi_frame_results`
 3. Install the following libraries (assuming pytorch is properly installed in environment):
 ```
 pip install peft
