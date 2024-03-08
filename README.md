@@ -43,7 +43,7 @@ First download the train/val/test split [here](https://drive.google.com/file/d/1
       ├── T5-Large/
 ```
 ## Training
-* To run training, run `python train.py`. In addition, you can add the following command line hyperparameters.
+* To run training, run `python train.py --batch-size [BATCH SIZE] --epochs [EPOCHS] --lm {T5-Base, T5-Large}`. For more information on other hyperparameters such as loading checkpoints or altering learning rate, weight decay, or the hidden size for gated pooling attention, run `python train.py --help`
 ## Running on Google Colab
 If you want to run our code on Google Colab, we have provided three different notebooks in the `colab` folder that can be used for training each model type and inference:
 * `train_T5_Base.ipynb`: Allows for training EM-VLM4AD with the T5-Medium LM backbone.
