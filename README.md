@@ -42,6 +42,8 @@ First download the train/val/test split [here](https://drive.google.com/file/d/1
       ├── T5-Medium/
       ├── T5-Large/
 ```
+## Training
+* To run training, run `python train.py`. In addition, you can add the following command line hyperparameters.
 ## Running on Google Colab
 If you want to run our code on Google Colab, we have provided three different notebooks in the `colab` folder that can be used for training each model type and inference:
 * `train_T5_Base.ipynb`: Allows for training EM-VLM4AD with the T5-Medium LM backbone.
