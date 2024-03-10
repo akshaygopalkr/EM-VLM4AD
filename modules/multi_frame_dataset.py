@@ -31,10 +31,10 @@ class MultiFrameDataset(Dataset):
         imgs = [self.transform(read_image(p).float()).to(device) for p in img_path]
         imgs = torch.stack(imgs, dim=0)
 
-        return q_text, imgs, a_text
+        return q_text, imgs, a_text, sorted(list(img_path))
 
     def collate_fn(self, batch):
-        q_texts, imgs, a_texts = zip(*batch)
+        q_texts, imgs, a_texts, _ = zip(*batch)
         imgs = torch.stack(list(imgs), dim=0)
 
         encodings = self.tokenizer(q_texts, padding=True, return_tensors="pt").input_ids.to(device)
@@ -43,10 +43,10 @@ class MultiFrameDataset(Dataset):
         return encodings, imgs, labels
 
     def test_collate_fn(self, batch):
-        q_texts, imgs, a_texts = zip(*batch)
+        q_texts, imgs, a_texts, img_path = zip(*batch)
         imgs = torch.stack(list(imgs), dim=0)
 
         encodings = self.tokenizer(q_texts, padding=True, return_tensors="pt").input_ids.to(device)
         labels = self.tokenizer(a_texts, padding=True, return_tensors='pt').input_ids.to(device)
 
-        return encodings, imgs, labels, list(a_texts)
+        return list(q_texts), encodings, imgs, labels, img_path

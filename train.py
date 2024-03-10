@@ -209,10 +209,10 @@ def params():
     parser.add_argument('--freeze-lm', action='store_true', help='Freeze LM during training')
     parser.add_argument('--lm', default='T5-Base', choices=['T5-Base', 'T5-Large'], type=str, help='Backbone LM to use, '
                                                                                         'use \'T5-Base\' for T5-Medium')
-    parser.add_argument('--checkpoint-frequency', default=10000, type=int, help='Frequency of showing example outputs')
+    parser.add_argument('--checkpoint-frequency', default=500, type=int, help='Frequency of showing example outputs')
     parser.add_argument('--lora', action='store_true', help='Perform LoRA finetuning, recommend if '
                                                             'using T5-Large backbone LM')
-    parser.add_argument('--lora-dim', default=16, type=int, help='LoRA dimension')
+    parser.add_argument('--lora-dim', default=64, type=int, help='LoRA dimension')
     parser.add_argument('--lora-alpha', default=32, type=int, help='LoRA alpha')
     parser.add_argument('--lora-dropout', default=0.05, type=float, help='LoRA dropout')
     parser.add_argument('--num-workers', default=0, type=int, help='# of Workers used by Dataloader')
@@ -248,6 +248,8 @@ if __name__ == '__main__':
         processor = T5Tokenizer.from_pretrained('google-t5/t5-base')
     else:
         processor = T5Tokenizer.from_pretrained('google-t5/t5-large')
+
+    processor.add_tokens('<')
 
     train_dset = MultiFrameDataset(
         input_file=os.path.join('data', 'multi_frame',
