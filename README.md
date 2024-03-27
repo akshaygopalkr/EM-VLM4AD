@@ -15,7 +15,7 @@ conda env create -f env.yml
 conda activate EM-VLM4AD
 ```
 ## Model Weights
-* You can download the model weights for the [T5-Medium](https://drive.google.com/drive/folders/1K61Ou-m5c5UmN2ggT-Huw3rv7PhW5Wft?usp=sharing) and [T5-Large-Q](https://drive.google.com/drive/folders/1bzxaxz6zSRZuMv284cjhQTSs_8i98kGI?usp=sharing) version of EM-VLM4AD at the following links. Put the folders for each of these models into the `multi_frame_results` folder. Your directory should look like the following:
+* You can download the model weights for the [T5-Based](https://drive.google.com/drive/folders/1K61Ou-m5c5UmN2ggT-Huw3rv7PhW5Wft?usp=sharing) and [T5-Large-Q](https://drive.google.com/drive/folders/12bHyRTpWWxIJ2pb0WWzfX5mMdkNHKMVP?usp=sharing) version of EM-VLM4AD at the following links. Put the folders for each of these models into the `multi_frame_results` folder. Your directory should look like the following:
 ```
 └── rootFolder
  ├── multi_frame_results/
@@ -25,7 +25,7 @@ conda activate EM-VLM4AD
         ├── latest_model.pth
 ```
 ## Dataset
-First download the train/val/test split [here](https://drive.google.com/file/d/1TyqlEY8_4lark86Y2cqUUMgCyCJvvFjN/view?usp=sharing) in your root folder. This will include data from the DriveLM dataset as well as the train/val/test splits we use for our experiments. The folder structure should now be as follows: 
+First download the train/val/test split [here](https://drive.google.com/file/d/17p4EwArHh7-L4HSlGizsF_Ix_Y-sYxkw/view?usp=sharing) in your root folder. This will include data from the DriveLM dataset as well as the train/val/test splits we use for our experiments. The folder structure should now be as follows: 
 ```
 └── rootFolder
   ├── data/
