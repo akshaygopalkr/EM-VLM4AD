@@ -4,7 +4,7 @@
     <img src="assets/ex2.jpeg" alt="Image 2" style="width: 49%;">
 </div>
 
-* This repository contains the code necessary to replicate the paper "[Efficient, Lightweight Multi-Frame Vision Language Model for Visual Question Answering in Autonomous Driving](https://arxiv.org/abs/2403.19838)", which was submitted to the Vision & Language for Autonomous Driving & Robotics Workshop at CVPR 2024.
+* This repository contains the code necessary to replicate the paper "[Efficient, Lightweight Multi-Frame Vision Language Model for Visual Question Answering in Autonomous Driving](https://arxiv.org/abs/2403.19838)", which was accepted to the Vision & Language for Autonomous Driving & Robotics Workshop at CVPR 2024.
 * Authors: Akshay Gopalkrishnan, Ross Greer, and Mohan Trivedi
 ## Citation
 If you find our code and research paper useful, please cite our paper as following:
