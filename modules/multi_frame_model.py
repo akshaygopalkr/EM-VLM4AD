@@ -163,3 +163,13 @@ class DriveVLMT5(nn.Module):
 
         # If training include the labels
         return self.model(inputs_embeds=merged_embedding, labels=labels)
+
+    def generate(self, text_enc, imgs, lidar=None):
+
+        merged_embedding = self.mvp(text_enc, imgs, self.model)
+
+        attention_mask = torch.ones(merged_embedding.shape[:2], dtype=torch.long, device=device)
+        decoder_input_ids = torch.ones((merged_embedding.shape[0], 1), dtype=torch.long, device=device)*self.model.config.decoder_start_token_id
+        output_ids = self.model.generate(attention_mask=attention_mask, decoder_input_ids=decoder_input_ids, inputs_embeds=merged_embedding, max_length=512, early_stopping=True)
+
+        return output_ids
