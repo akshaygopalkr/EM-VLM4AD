@@ -24,11 +24,7 @@ def val_model(dloader):
     with torch.no_grad():
         for idx, (q_texts, encodings, imgs, labels, img_paths) in progress_bar(enumerate(dloader), total=len(dloader)):
 
-            # Get the hidden states (output)
-            hidden_states = model(encodings, imgs, labels).logits
-
-            # Perform decoding (e.g., greedy decoding)
-            outputs = torch.argmax(hidden_states, dim=-1)
+            outputs = model.generate(encodings, imgs)
 
             # Get the text output
             text_outputs = [processor.decode(output, skip_special_tokens=True) for output in outputs]
