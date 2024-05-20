@@ -35,7 +35,7 @@ conda activate EM-VLM4AD
         ├── latest_model.pth
 ```
 ## Dataset
-First download the train/val/test split [here](https://drive.google.com/file/d/17p4EwArHh7-L4HSlGizsF_Ix_Y-sYxkw/view?usp=sharing) in your root folder. This will include data from the DriveLM dataset as well as the train/val/test splits we use for our experiments. The folder structure should now be as follows: 
+First download the train/val/test split [here](https://drive.google.com/file/d/1isiXXTg46nl5SqMiEV4XjFD71KCCzezi/view?usp=sharing) in your root folder. This will include data from the DriveLM dataset as well as the train/val/test splits we use for our experiments. The folder structure should now be as follows: 
 ```
 └── rootFolder
   ├── data/
