@@ -1,4 +1,5 @@
 # EM-VLM4AD
+[![arXiv](https://img.shields.io/badge/arXiv-2402.03235-a2ad00.svg)](https://arxiv.org/abs/2403.19838)
 <div style="display: flex;">
     <img src="assets/ex1.jpeg" alt="Image 1" style="width: 49%;">
     <img src="assets/ex2.jpeg" alt="Image 2" style="width: 49%;">
